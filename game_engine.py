@@ -234,4 +234,4 @@ def run_battle(agent_fst, agent_snd):
         current_player = 0
     Printer.print_ui('============================================================')
     # Printer.print_ui()
-    return current_player, turn_number
+    return current_player
