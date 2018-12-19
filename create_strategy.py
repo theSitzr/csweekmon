@@ -86,6 +86,8 @@ if __name__ == '__main__':
         for idx in range(game_engine.MOVE_COUNT):
             MOVES.append(controlled_int_input('Move #{}: '.format(idx + 1),
                                               game_engine.ALL_MOVES_COUNT, 1) - 1)
+        BANNED = controlled_int_input('Ban move: ', game_engine.ALL_MOVES_COUNT, 1)
+        REPLACEMENT = controlled_int_input('Replacement move: ', game_engine.ALL_MOVES_COUNT, 1)
         print('Items:')
         print('  0) Nothing (no more items)')
         for idx, item in enumerate(game_engine.ITEMS):
@@ -103,6 +105,8 @@ if __name__ == '__main__':
         CSW.stats['Special'] = SPECIAL
         CSW.stats['Moves'] = MOVES
         CSW.stats['Items'] = ITEMS
+        CSW.stats['Banned'] = BANNED
+        CSW.stats['Replacement'] = REPLACEMENT
         if game_engine.verify(CSW, CREDITS, STAT_POINTS):
             break
         print('Invalid strategy settings!')
