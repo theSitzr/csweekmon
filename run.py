@@ -10,10 +10,7 @@ from csweekmon import Csweekmon
 STRATEGIES = [
     strategies.SimpleStrategy,
     strategies.TankStrategy,
-    strategies.GlassCannonStrategy,
-    strategies.HeavyHitStrategy,
-    strategies.RandomStrategy,
-    strategies.HugePowerStrategy,
+    strategies.GlassCannonStrategy
 ]
 
 NSTRATEGIES = len(STRATEGIES)
